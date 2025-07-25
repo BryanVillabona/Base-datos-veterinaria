@@ -60,3 +60,14 @@ CREATE TABLE Tratamiento (
     nombre_tratamiento VARCHAR(100) NOT NULL,
     observacion TEXT
 );
+
+-- Tabla: Registro_tratamiento
+CREATE TABLE Registro_tratamiento (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    ID_visita INT NOT NULL,
+    ID_tratamiento INT NOT NULL,
+    ID_veterinario INT NOT NULL,
+    FOREIGN KEY (ID_visita) REFERENCES Visita(ID),
+    FOREIGN KEY (ID_tratamiento) REFERENCES Tratamiento(ID),
+    FOREIGN KEY (ID_veterinario) REFERENCES Veterinario(ID)
+);
