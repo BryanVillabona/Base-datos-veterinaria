@@ -26,3 +26,9 @@ INSERT INTO Servicio (nombre_servicio, descripcion, precio) VALUES
 ('Consulta médica', 'Revisión general por el veterinario', 40000.00),
 ('Desparasitación', 'Aplicación de antiparasitario', 30000.00),
 ('Vacunación', 'Aplicación de vacuna anual', 35000.00);
+
+-- Veterinarios
+INSERT INTO Veterinario (nombre, cedula) VALUES
+('Dr. Juan López', '900100100'),
+('Dra. Marta Salas', '900200200'),
+('Dr. Pablo Ruiz', '900300300');
