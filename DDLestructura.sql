@@ -42,3 +42,21 @@ CREATE TABLE Visita (
     fecha DATE NOT NULL,
     FOREIGN KEY (ID_mascota) REFERENCES Mascotas(ID)
 );
+
+-- Tabla: Registro_visitas
+CREATE TABLE Registro_visitas (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    ID_servicio INT NOT NULL,
+    ID_visita INT NOT NULL,
+    ID_veterinario INT NOT NULL,
+    FOREIGN KEY (ID_servicio) REFERENCES Servicio(ID),
+    FOREIGN KEY (ID_visita) REFERENCES Visita(ID),
+    FOREIGN KEY (ID_veterinario) REFERENCES Veterinario(ID)
+);
+
+-- Tabla: Tratamiento
+CREATE TABLE Tratamiento (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    nombre_tratamiento VARCHAR(100) NOT NULL,
+    observacion TEXT
+);
