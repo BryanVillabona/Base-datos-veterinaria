@@ -45,3 +45,16 @@ INSERT INTO Visita (ID_mascota, fecha) VALUES
 (8, '2025-07-08'),
 (9, '2025-07-09'),
 (10, '2025-07-10');
+
+-- Registro_visitas
+INSERT INTO Registro_visitas (ID_servicio, ID_visita, ID_veterinario) VALUES
+(1, 1, 1),
+(2, 2, 2),
+(3, 3, 3),
+(4, 4, 1),
+(5, 5, 2),
+(1, 6, 3),
+(2, 7, 1),
+(3, 8, 2),
+(4, 9, 3),
+(5, 10, 1);
