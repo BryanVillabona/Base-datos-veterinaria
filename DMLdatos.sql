@@ -58,3 +58,19 @@ INSERT INTO Registro_visitas (ID_servicio, ID_visita, ID_veterinario) VALUES
 (3, 8, 2),
 (4, 9, 3),
 (5, 10, 1);
+
+-- Tratamientos
+INSERT INTO Tratamiento (nombre_tratamiento, observacion) VALUES
+('Antibiótico', 'Administrar por 5 días'),
+('Antiinflamatorio', 'Aplicar cada 12 horas'),
+('Vitaminas', 'Complemento nutricional'),
+('Pomada tópica', 'Aplicar en zona afectada'),
+('Antiparasitario oral', 'Dosis única');
+
+-- Registro_tratamiento
+INSERT INTO Registro_tratamiento (ID_visita, ID_tratamiento, ID_veterinario) VALUES
+(1, 1, 1),
+(2, 2, 2),
+(3, 3, 3),
+(4, 4, 1),
+(5, 5, 2);
