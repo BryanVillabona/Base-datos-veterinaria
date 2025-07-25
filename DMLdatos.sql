@@ -18,3 +18,11 @@ INSERT INTO Mascotas (ID_dueño, nombre_mascota, especie, raza, edad, sexo, vacu
 (4, 'Simba', 'Gato', 'Bengalí', 3, 'Macho', TRUE),
 (5, 'Kira', 'Perro', 'Dálmata', 1, 'Hembra', FALSE),
 (5, 'Milo', 'Gato', 'Sphynx', 4, 'Macho', TRUE);
+
+-- Servicios
+INSERT INTO Servicio (nombre_servicio, descripcion, precio) VALUES
+('Baño', 'Baño básico con shampoo especial', 25000.00),
+('Corte de uñas', 'Corte y limado de uñas', 15000.00),
+('Consulta médica', 'Revisión general por el veterinario', 40000.00),
+('Desparasitación', 'Aplicación de antiparasitario', 30000.00),
+('Vacunación', 'Aplicación de vacuna anual', 35000.00);
