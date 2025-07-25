@@ -7,3 +7,23 @@ CREATE TABLE Dueños (
     direccion VARCHAR(150)
 );
 
+-- Tabla: Mascotas
+CREATE TABLE Mascotas (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    ID_dueño INT NOT NULL,
+    nombre_mascota VARCHAR(50) NOT NULL,
+    especie VARCHAR(30),
+    raza VARCHAR(50),
+    edad INT,
+    sexo ENUM('Macho', 'Hembra'),
+    vacunado BOOLEAN,
+    FOREIGN KEY (ID_dueño) REFERENCES Dueños(ID)
+);
+
+-- Tabla: Servicio
+CREATE TABLE Servicio (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    nombre_servicio VARCHAR(100) NOT NULL,
+    descripcion TEXT,
+    precio DECIMAL(10,2) NOT NULL
+);
