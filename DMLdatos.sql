@@ -32,3 +32,16 @@ INSERT INTO Veterinario (nombre, cedula) VALUES
 ('Dr. Juan López', '900100100'),
 ('Dra. Marta Salas', '900200200'),
 ('Dr. Pablo Ruiz', '900300300');
+
+-- Visitas
+INSERT INTO Visita (ID_mascota, fecha) VALUES
+(1, '2025-07-01'),
+(2, '2025-07-02'),
+(3, '2025-07-03'),
+(4, '2025-07-04'),
+(5, '2025-07-05'),
+(6, '2025-07-06'),
+(7, '2025-07-07'),
+(8, '2025-07-08'),
+(9, '2025-07-09'),
+(10, '2025-07-10');
