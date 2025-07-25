@@ -27,3 +27,18 @@ CREATE TABLE Servicio (
     descripcion TEXT,
     precio DECIMAL(10,2) NOT NULL
 );
+
+-- Tabla: Veterinario
+CREATE TABLE Veterinario (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100) NOT NULL,
+    cedula VARCHAR(15) UNIQUE NOT NULL
+);
+
+-- Tabla: Visita
+CREATE TABLE Visita (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    ID_mascota INT NOT NULL,
+    fecha DATE NOT NULL,
+    FOREIGN KEY (ID_mascota) REFERENCES Mascotas(ID)
+);
