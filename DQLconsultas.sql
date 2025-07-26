@@ -51,3 +51,19 @@ GROUP BY VET.nombre;
 -- 12. Crear una tabla con mascotas mayores de 3 años
 CREATE TABLE Mascotas_adultas AS
 SELECT * FROM Mascotas WHERE edad > 3;
+
+-- 13. Mostrar tratamientos con nombre de veterinario que los aplicó
+SELECT T.nombre_tratamiento, V.nombre AS veterinario
+FROM Registro_tratamiento RT
+JOIN Tratamiento T ON RT.ID_tratamiento = T.ID
+JOIN Veterinario V ON RT.ID_veterinario = V.ID;
+
+-- 14. Mostrar todos los dueños con su número de mascotas (subconsulta con alias)
+SELECT D.nombre, (
+    SELECT COUNT(*) FROM Mascotas M WHERE M.ID_dueño = D.ID
+) AS total_mascotas
+FROM Dueños D;
+
+-- 15. Mostrar servicios con precio redondeado
+SELECT nombre_servicio, ROUND(precio, 0) AS precio_redondeado
+FROM Servicio;
