@@ -41,3 +41,13 @@ SELECT nombre_servicio, precio
 FROM Servicio
 ORDER BY precio DESC
 LIMIT 1;
+
+-- 11. Listar visitas agrupadas por veterinario (cuántas atendió cada uno)
+SELECT VET.nombre AS veterinario, COUNT(*) AS total_visitas
+FROM Registro_visitas RV
+JOIN Veterinario VET ON RV.ID_veterinario = VET.ID
+GROUP BY VET.nombre;
+
+-- 12. Crear una tabla con mascotas mayores de 3 años
+CREATE TABLE Mascotas_adultas AS
+SELECT * FROM Mascotas WHERE edad > 3;
