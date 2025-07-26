@@ -95,7 +95,7 @@ Se desarrollaron 15 consultas que utilizan:
 ## 📌 Autores
 
 | Nombre del Integrante | GitHub |
-|---|---|---|
+|---|---|
 | Sergio Lievano | [@sergiosteven66](https://github.com/sergiosteven66)|
 | Bryan Villabona | [@BryanVillabona](https://github.com/BryanVillabona)|
 
