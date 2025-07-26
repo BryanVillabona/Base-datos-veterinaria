@@ -31,3 +31,13 @@ FROM Tratamiento T;
 SELECT nombre_mascota,
        IF(vacunado = 1, 'Vacunado', 'No vacunado') AS estado_vacuna
 FROM Mascotas;
+
+-- 9. Concatenar nombre de mascota con su especie
+SELECT CONCAT(nombre_mascota, ' - ', especie) AS descripcion
+FROM Mascotas;
+
+-- 10. Mostrar el servicio más costoso
+SELECT nombre_servicio, precio
+FROM Servicio
+ORDER BY precio DESC
+LIMIT 1;
