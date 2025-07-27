@@ -88,7 +88,7 @@ Se desarrollaron 15 consultas que utilizan:
 
 > Enlace al video explicando el modelo E-R y la implementación en SQL:
 
-📎 [Video explicativo aquí](https://enlace-a-tu-video.com)
+📎 [Video explicativo aquí](https://drive.google.com/file/d/14xI5PS08O3t5WuajxzkDx2ph5Jc_LraH/view?usp=sharing)
 
 ---
 
