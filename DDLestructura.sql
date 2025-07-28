@@ -1,5 +1,9 @@
+CREATE DATABASE IF NOT EXISTS veterinaria;
+
+USE veterinaria;
+
 -- Tabla: Dueños
-CREATE TABLE Dueños (
+CREATE TABLE IF NOT EXISTS Dueños (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     cedula VARCHAR(15) UNIQUE NOT NULL,
     nombre VARCHAR(100) NOT NULL,
@@ -8,7 +12,7 @@ CREATE TABLE Dueños (
 );
 
 -- Tabla: Mascotas
-CREATE TABLE Mascotas (
+CREATE TABLE IF NOT EXISTS Mascotas (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     ID_dueño INT NOT NULL,
     nombre_mascota VARCHAR(50) NOT NULL,
@@ -21,7 +25,7 @@ CREATE TABLE Mascotas (
 );
 
 -- Tabla: Servicio
-CREATE TABLE Servicio (
+CREATE TABLE IF NOT EXISTS Servicio (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     nombre_servicio VARCHAR(100) NOT NULL,
     descripcion TEXT,
@@ -29,14 +33,14 @@ CREATE TABLE Servicio (
 );
 
 -- Tabla: Veterinario
-CREATE TABLE Veterinario (
+CREATE TABLE IF NOT EXISTS Veterinario (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(100) NOT NULL,
     cedula VARCHAR(15) UNIQUE NOT NULL
 );
 
 -- Tabla: Visita
-CREATE TABLE Visita (
+CREATE TABLE IF NOT EXISTS Visita (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     ID_mascota INT NOT NULL,
     fecha DATE NOT NULL,
@@ -44,7 +48,7 @@ CREATE TABLE Visita (
 );
 
 -- Tabla: Registro_visitas
-CREATE TABLE Registro_visitas (
+CREATE TABLE IF NOT EXISTS Registro_visitas (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     ID_servicio INT NOT NULL,
     ID_visita INT NOT NULL,
@@ -55,14 +59,14 @@ CREATE TABLE Registro_visitas (
 );
 
 -- Tabla: Tratamiento
-CREATE TABLE Tratamiento (
+CREATE TABLE IF NOT EXISTS Tratamiento (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     nombre_tratamiento VARCHAR(100) NOT NULL,
     observacion TEXT
 );
 
 -- Tabla: Registro_tratamiento
-CREATE TABLE Registro_tratamiento (
+CREATE TABLE IF NOT EXISTS Registro_tratamiento (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     ID_visita INT NOT NULL,
     ID_tratamiento INT NOT NULL,

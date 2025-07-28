@@ -49,7 +49,7 @@ JOIN Veterinario VET ON RV.ID_veterinario = VET.ID
 GROUP BY VET.nombre;
 
 -- 12. Crear una tabla con mascotas mayores de 3 años
-CREATE TABLE Mascotas_adultas AS
+CREATE TABLE IF NOT EXISTS Mascotas_adultas AS
 SELECT * FROM Mascotas WHERE edad > 3;
 
 -- 13. Mostrar tratamientos con nombre de veterinario que los aplicó
